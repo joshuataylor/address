@@ -14,6 +14,7 @@ use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTes
 
 /**
  * @coversDefaultClass \Drupal\address\Plugin\Validation\Constraint\CountryConstraintValidator
+ * @group address
  */
 class CountryConstraintValidatorTest extends AbstractConstraintValidatorTest {
 
@@ -33,7 +34,7 @@ class CountryConstraintValidatorTest extends AbstractConstraintValidatorTest {
     // The following code is copied from the parent setUp(), which isn't
     // called to avoid the call to \Locale, which introduces a dependency
     // on the intl extension (or symfony/intl).
-    $this->group = 'MyGroup';
+    $this->group = 'address';
     $this->metadata = null;
     $this->object = null;
     $this->value = 'InvalidValue';
