@@ -15,7 +15,7 @@ namespace Drupal\address;
 interface AddressFormatImporterInterface {
 
   /**
-   * Starts a batch process that imports all available data.
+   * Starts a process that imports all available data.
    */
   public function startImport();
 
@@ -25,7 +25,15 @@ interface AddressFormatImporterInterface {
    * @param array $countryCodes
    *   Array of country codes to import address formats for.
    */
-  public function importEntities(array $countryCodes);
+  public function importEntitiesByCountryCodes(array $countryCodes);
+
+  /**
+   * Imports address formats with the given country codes.
+   *
+   * @param array $addressFormats
+   *   Array of country codes to import address formats for.
+   */
+  public function importEntities(array $addressFormats);
 
   /**
    * Imports translations for the given language codes.

@@ -67,7 +67,7 @@ class DefaultFormatterTest extends KernelTestBase {
     // automatically. Instead, we manually import the address formats we need.
     $countryCodes = ['SV', 'TW', 'US', 'ZZ'];
     $importer = \Drupal::service('address.address_format_importer');
-    $importer->importEntities($countryCodes);
+    $importer->importEntitiesByCountryCodes($countryCodes);
     $importer->importTranslations(['zh-hant']);
 
     $this->entityType = 'entity_test';
